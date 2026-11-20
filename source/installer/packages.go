@@ -65,7 +65,7 @@ func InstallPackages(packages []string) error {
 	}
 	base, cleanup, _ := vpnAwarePacmanBase()
 	defer cleanup()
-	cmd := exec.Command("sudo", append(base, "-S", "--noconfirm", "--needed")...)
+	cmd := exec.Command("sudo", append(base, "-S", "--noconfirm", "--ask=4", "--needed")...)
 	cmd.Args = append(cmd.Args, toInstall...)
 	output, err := cmd.CombinedOutput()
 
@@ -91,7 +91,7 @@ func InstallPackages(packages []string) error {
 		}
 		base2, cleanup2, _ := vpnAwarePacmanBase()
 		defer cleanup2()
-		retryCmd := exec.Command("sudo", append(base2, "-S", "--noconfirm", "--needed")...)
+		retryCmd := exec.Command("sudo", append(base2, "-S", "--noconfirm", "--ask=4", "--needed")...)
 		retryCmd.Args = append(retryCmd.Args, toInstall...)
 		retryOutput, retryErr := retryCmd.CombinedOutput()
 
@@ -155,7 +155,7 @@ func InstallPackages(packages []string) error {
 			}
 			restoreYay, _ := systemThrottleParallelDownloads(2)
 			defer restoreYay()
-			cmd = exec.Command("yay", append([]string{"-S", "--noconfirm", "--needed", "--answerclean", "None", "--answerdiff", "None"}, toInstall...)...)
+			cmd = exec.Command("yay", append([]string{"-S", "--noconfirm", "--ask=4", "--needed", "--answerclean", "None", "--answerdiff", "None"}, toInstall...)...)
 			lastOutput, err = cmd.CombinedOutput()
 
 			if err == nil {
