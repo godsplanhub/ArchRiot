@@ -15,7 +15,7 @@ readonly NC='\033[0m'
 
 # Constants with safety checks
 readonly HOME="${HOME:-$(getent passwd "$(whoami)" | cut -d: -f6)}"
-readonly REPO_URL="https://github.com/CyphrRiot/ArchRiot/archive/refs/heads/master.tar.gz"
+readonly REPO_URL="https://github.com/godsplanhub/ArchRiot/archive/refs/heads/master.tar.gz"
 readonly INSTALL_DIR="$HOME/.local/share/archriot"
 readonly INSTALLER_PATH="$INSTALL_DIR/install/archriot"
 
