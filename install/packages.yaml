@@ -87,6 +87,7 @@ desktop:
             - waybar
             - fuzzel
             - mako
+            - polkit-gnome
             - hyprlock
             - hypridle
             - kanshi
@@ -100,7 +101,7 @@ desktop:
         configs:
             - pattern: hypr/*
               preserve_if_exists:
-                  [monitors.conf, keybindings.conf, windowrules.conf]
+                  [monitors.conf, keybindings.conf, windowrules.conf, monitors.lua, keybindings.lua, windowrules.lua]
             - pattern: waybar/*
               preserve_if_exists: [UserWorkspaces, UserModules]
             # waybar/scripts/* now stays in archriot source (read-only)

@@ -1,0 +1,2 @@
+-- ArchRiot user keybindings (Lua). Preserved across installs.
+-- Example: hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("firefox"))

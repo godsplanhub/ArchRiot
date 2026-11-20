@@ -1,0 +1,2 @@
+-- ArchRiot user window rules (Lua). Preserved across installs.
+-- Example: hl.window_rule({ name = "float-calc", match = { class = "^(calc)$" }, float = true })
