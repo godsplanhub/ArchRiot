@@ -283,7 +283,7 @@ desktop:
     utilities:
         packages:
             - gnome-system-monitor
-            #- iwgtk
+            - iwgtk
             - file-roller
             # - secrets
             - transmission-gtk
@@ -387,6 +387,7 @@ system:
 
     bluetooth:
         packages:
+            - bluez-utils
             - blueberry
         commands:
             - "sudo systemctl enable --now bluetooth.service"
